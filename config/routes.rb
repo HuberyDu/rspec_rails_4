@@ -6,7 +6,9 @@ ContactsExample40::Application.routes.draw do
   resources :users
   resources :sessions
 
-  resources :contacts
+  resources :contacts do
+  	resources :phones 
+  end
 
   root to: 'contacts#index'
 end
